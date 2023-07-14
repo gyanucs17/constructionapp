@@ -36,6 +36,7 @@ app.get('/todo', (req, res)=> {
 connectDB();
 
 app.use('/api/todo/auth', require('./routes/user'));
+app.use('/api/material/master', require('./routes/materialmaster'));
 //app.use('/api/todo', require('./routes/todo'));
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,
