@@ -34,7 +34,7 @@ router.post('/', auth, async (req, res, next) => {
 //mehod  GET
 router.get('/', auth, async(req, res, next) => {
     try {
-        const todo = await Todo.find({user: req.user.id, finished: false});
+        const todo = await Todo.find({});
 
         if(!todo) {
             return res.status(400).json({ success: false, msg: 'Something error happened'});
