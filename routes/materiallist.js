@@ -34,8 +34,8 @@ router.post('/', auth, async (req, res, next) => {
 //mehod  GET
 router.get('/', auth, async(req, res, next) => {
     try {
-        console.log(req.body.mMaster);
-        const todo = await Todo.find({mMaster: req.body});
+        console.log(JSON.stringify(req.body));
+        const todo = await Todo.find({mMaster: req.body.mMaster});
 
         if(!todo) {
             return res.status(400).json({ success: false, msg: 'Something error happened'});
