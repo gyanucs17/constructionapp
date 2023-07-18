@@ -34,7 +34,7 @@ router.post('/', auth, async (req, res, next) => {
 //mehod  GET
 router.get('/', auth, async(req, res, next) => {
     try {
-        console.log(JSON.stringify(req.body));
+        console.log(JSON.stringify(req));
         const todo = await Todo.find({mMaster: req.body.mMaster});
 
         if(!todo) {
