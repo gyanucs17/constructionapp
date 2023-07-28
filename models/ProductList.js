@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const materialListSchema = new mongoose.Schema({
+const productListSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -9,13 +9,10 @@ const materialListSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-
     image: {
         type: String
     },
-    mMaster: {
-        type: String,
-    }, 
+
     mtype: {
         type: String,
     }, 
@@ -43,4 +40,4 @@ const materialListSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('MaterialList', materialListSchema);
+module.exports = mongoose.model('ProductList', productListSchema);

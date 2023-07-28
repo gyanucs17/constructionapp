@@ -1,7 +1,7 @@
 const express = require('express');
 const auth = require('../middleware/user_jwt');
 
-const Todo = require('../models/MaterialList');
+const Todo = require('../models/ProductList');
 
 const router = express.Router();
 
