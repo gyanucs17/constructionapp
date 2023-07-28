@@ -26,7 +26,8 @@ const materialListSchema = new mongoose.Schema({
     sub_product: {
         type: String,
         required: true,
-        default: "0"
+        default: "0",
+        sparse: true
     },
     crearedBy: {
         type: mongoose.Schema.Types.ObjectId,
